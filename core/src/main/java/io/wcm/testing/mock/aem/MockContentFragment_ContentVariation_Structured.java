@@ -22,6 +22,8 @@ package io.wcm.testing.mock.aem;
 import java.util.Calendar;
 
 import org.apache.sling.api.resource.ModifiableValueMap;
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.testing.resourceresolver.MockResource;
 import org.jetbrains.annotations.NotNull;
 
 import com.adobe.cq.dam.cfm.ContentFragmentException;
@@ -34,13 +36,13 @@ import com.adobe.cq.dam.cfm.VariationDef;
  * Mock implementation of {@link ContentVariation}.
  */
 class MockContentFragment_ContentVariation_Structured extends MockContentFragment_Versionable implements ContentVariation {
-
   private final VariationDef variationDef;
   private final String structuredDataKey;
   private final ModifiableValueMap structuredDataProps;
 
   MockContentFragment_ContentVariation_Structured(VariationDef variationDef,
       String structuredDataKey, ModifiableValueMap structuredDataProps) {
+    super(null, null);
     this.variationDef = variationDef;
     this.structuredDataKey = structuredDataKey;
     this.structuredDataProps = structuredDataProps;
