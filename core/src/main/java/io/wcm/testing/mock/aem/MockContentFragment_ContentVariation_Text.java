@@ -21,6 +21,7 @@ package io.wcm.testing.mock.aem;
 
 import java.util.Calendar;
 
+import org.apache.sling.api.resource.Resource;
 import org.jetbrains.annotations.NotNull;
 
 import com.adobe.cq.dam.cfm.ContentFragmentException;
@@ -34,11 +35,10 @@ import com.day.cq.dam.api.Asset;
  * Mock implementation of {@link ContentVariation}.
  */
 class MockContentFragment_ContentVariation_Text extends MockContentFragment_Versionable implements ContentVariation {
-
   private final VariationDef variationDef;
   private final Asset asset;
-
   MockContentFragment_ContentVariation_Text(VariationDef variationDef, Asset asset) {
+    super(null,  null);
     this.variationDef = variationDef;
     this.asset = asset;
   }
