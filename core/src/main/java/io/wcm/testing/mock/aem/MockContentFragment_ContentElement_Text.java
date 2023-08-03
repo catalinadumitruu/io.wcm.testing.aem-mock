@@ -56,6 +56,7 @@ class MockContentFragment_ContentElement_Text extends MockContentFragment_Versio
   private final Asset asset;
 
   MockContentFragment_ContentElement_Text(MockContentFragment contentFragment, Resource textElementResource) {
+    super(contentFragment.getContentResource(), contentFragment.getContentResource().getResourceResolver());
     this.contentFragment = contentFragment;
     this.textElementResource = textElementResource;
     this.asset = contentFragment.getAsset();
