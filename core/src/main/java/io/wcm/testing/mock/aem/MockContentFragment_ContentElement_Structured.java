@@ -53,6 +53,7 @@ class MockContentFragment_ContentElement_Structured extends MockContentFragment_
 
   MockContentFragment_ContentElement_Structured(MockContentFragment contentFragment, String structuredDataKey,
       ModifiableValueMap structuredDataProps) {
+    super(contentFragment.getContentResource(), contentFragment.getContentResource().getResourceResolver());
     this.contentFragment = contentFragment;
     this.structuredDataKey = structuredDataKey;
     this.structuredDataProps = structuredDataProps;
