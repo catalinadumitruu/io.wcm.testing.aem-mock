@@ -61,6 +61,7 @@ class MockContentFragment extends MockContentFragment_Versionable implements Con
   private final Resource modelElementsResource;
 
   MockContentFragment(Resource assetResource) {
+    super(assetResource, assetResource.getResourceResolver());
     this.assetResource = assetResource;
     this.asset = assetResource.adaptTo(Asset.class);
 
